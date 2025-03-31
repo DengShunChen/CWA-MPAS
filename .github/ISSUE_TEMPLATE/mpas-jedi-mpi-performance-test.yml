@@ -1,0 +1,54 @@
+name: MPAS-JEDI MPI Performance Task
+description: Follow up on tasks related to MPAS-JEDI build and MPI performance testing.
+title: "[MPAS-JEDI Task] "
+labels: ["mpas-jedi", "mpi", "performance", "hpc"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📌 MPAS-JEDI 測試與 MPI 效能優化 To-do List
+        請依照任務進度更新狀態，並補充相關討論或成果連結。
+
+  - type: checkboxes
+    id: short-term
+    attributes:
+      label: 🔄 短期任務
+      description: 立即可執行的工作項目
+      options:
+        - label: 釐清亦安使用的 OpenMPI 架構與安裝流程（含 spack 安裝）
+        - label: 嘗試依照亦安的架構編譯 MPAS-JEDI
+        - label: 在 HPC 上執行 MPAS-JEDI，初步估算效能
+        - label: 協助理解亦安的設定與方法（由正欽與登舜協助）
+        - label: 安排登舜使用 Ting-Chi Wu 的筆電登入 Fugaku 觀察環境
+
+  - type: checkboxes
+    id: mid-term
+    attributes:
+      label: 🔍 中期任務
+      description: 需同步研究與技術驗證的項目
+      options:
+        - label: 研究通用 MPI（如 MPICH）在 FX1000 上的可行性
+        - label: 比較 FJMPI 與其他 MPI（OpenMPI/MPICH）在 FX1000 上的效能差異
+        - label: 收集 Fugaku 上的 MPI 實作與優化資料
+
+  - type: checkboxes
+    id: long-term
+    attributes:
+      label: 📌 長期方向
+      description: 策略與可持續性發展重點
+      options:
+        - label: 保持 MPAS-JEDI 系統的跨平台適應性
+        - label: 評估未來是否需要導入 FJMPI 或等效解法來提升效能
+
+  - type: textarea
+    id: progress-notes
+    attributes:
+      label: 📝 補充說明或進度紀錄
+      description: 請簡述目前完成狀況、遭遇問題或參考連結
+      placeholder: |
+        - 已完成 OpenMPI 架構調查。
+        - MPAS-JEDI 成功在 HPC 編譯，但效能未達預期，需後續優化。
+        - Fugaku 登入作業安排中...
+
